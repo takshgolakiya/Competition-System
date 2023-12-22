@@ -26,5 +26,6 @@ class Competition(Base):
     __tablename__ = 'competition'
     id = Column(Integer, primary_key=True)
     competition_name = Column(String)
+    
     time_created = Column(DateTime(timezone=True), server_default=func.now())
     time_updated = Column(DateTime(timezone=True), onupdate=func.now())
